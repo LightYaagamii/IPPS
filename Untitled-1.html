@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Note Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        input {
+            width: 90%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        @media (max-width: 600px) {
+            table {
+                width: 100%;
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            th, td {
+                padding: 5px;
+                font-size: 14px;
+            }
+            button {
+                width: 90%;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>IPPS Grade Calculator</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Module</th>
+                <th>TD/TP (40%)</th>
+                <th>Exam (60%)</th>
+                <th>Coefficient</th>
+            </tr>
+        </thead>
+        <tbody id="modules">
+            <tr>
+                <td>Plant Biology</td>
+                <td><input type="number" class="td" value="0" min="0" max="20"></td>
+                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
+                <td><input type="number" class="coef" value="2" min="0"></td>
+            </tr>
+            <tr>
+                <td>Animal Biology</td>
+                <td><input type="number" class="td" value="0" min="0" max="20"></td>
+                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
+                <td><input type="number" class="coef" value="2" min="0"></td>
+            </tr>
+            <tr>
+                <td>Organic Chemistry</td>
+                <td><input type="number" class="td" value="0" min="0" max="20"></td>
+                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
+                <td><input type="number" class="coef" value="2" min="0"></td>
+            </tr>
+            <tr>
+                <td>General Chemistry</td>
+                <td><input type="number" class="td" value="0" min="0" max="20"></td>
+                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
+                <td><input type="number" class="coef" value="2" min="0"></td>
+            </tr>
+            <tr>
+                <td>Physics</td>
+                <td><input type="number" class="td" value="0" min="0" max="20"></td>
+                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
+                <td><input type="number" class="coef" value="2" min="0"></td>
+            </tr>
+            <tr>
+                <td>Biostatistics</td>
+                <td><input type="number" class="td" value="0" min="0" max="20"></td>
+                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
+                <td><input type="number" class="coef" value="2" min="0"></td>
+            </tr>
+            <tr>
+                <td>Computer Science</td>
+                <td><input type="number" class="td" value="0" min="0" max="20"></td>
+                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
+                <td><input type="number" class="coef" value="2" min="0"></td>
+            </tr>
+            <tr>
+                <td>Terminology</td>
+                <td><input type="number" class="td" value="0" min="0" max="20"></td>
+                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
+                <td><input type="number" class="coef" value="1" min="0"></td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td><input type="number" class="td" value="0" min="0" max="20"></td>
+                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
+                <td><input type="number" class="coef" value="1" min="0"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="calculateFinalNote()">Calculate Final Note</button>
+    <h3>Final Note: <span id="finalNote">0.00</span></h3>
+    <script>
+        function calculateFinalNote() {
+            let modules = document.querySelectorAll("#modules tr");
+            let totalWeightedSum = 0;
+            let totalCoef = 0;
+            
+            modules.forEach(row => {
+                let td = parseFloat(row.querySelector(".td").value) || 0;
+                let exam = parseFloat(row.querySelector(".exam").value) || 0;
+                let coef = parseFloat(row.querySelector(".coef").value) || 0;
+                
+                if (coef > 0) {
+                    let moduleNote = (td * 0.4) + (exam * 0.6);
+                    totalWeightedSum += moduleNote * coef;
+                    totalCoef += coef;
+                }
+            });
+            
+            let finalNote = totalCoef > 0 ? totalWeightedSum / totalCoef : 0;
+            document.getElementById("finalNote").textContent = finalNote.toFixed(2);
+        }
+    </script>
+</body>
+</html>
