@@ -9,11 +9,11 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        .container1{
+        .container1 {
             display: flex;
             flex-direction: column;
             align-items: center;
-    justify-content: center;
+            justify-content: center;
         }
         .S1Grade {
             width: 100%;
@@ -23,22 +23,22 @@
             font-size: 0.9em;
             min-width: 400px;
             font-weight: bold;
-            border-radius: 5px ;
+            border-radius: 5px;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
         }
-        .S1Grade thead tr{
+        .S1Grade thead tr {
             background-color: #037b5b;
             color: #ffffff;
             text-align: left;
         }
-        .S1Grade th,.S1Grade td{
+        .S1Grade th, .S1Grade td {
             padding: 12px 15px;
         }
         .S1Grade tbody tr {
             border-bottom: 1px solid lightgray;
         }
-        .S1Grade tbody tr:nth-of-type(even){
+        .S1Grade tbody tr:nth-of-type(even) {
             background-color: #f3f3f3;
         }
         .calculate {
@@ -50,7 +50,7 @@
             font-size: 0.9em;
             font-weight: bold;
             color: white;
-            border: solid, rgb(255, 255, 255), 2px;
+            border: none;
             display: flex;
             gap: 10px;
             justify-content: center;
@@ -89,6 +89,8 @@
     <h2>IPPS Grade Calculator</h2>
     <hr>
     <div class="container1">
+
+    <h3>Semester 1</h3>
     <table class="S1Grade">
         <thead>
             <tr>
@@ -99,89 +101,77 @@
             </tr>
         </thead>
         <tbody id="modules">
-            <tr>
-                <td>Plant Biology</td>
-                <td><input type="number" class="td" value="0" min="0" max="20"></td>
-                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
-                <td><input type="number" class="coef" value="2" min="0"></td>
-            </tr>
-            <tr>
-                <td>Animal Biology</td>
-                <td><input type="number" class="td" value="0" min="0" max="20"></td>
-                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
-                <td><input type="number" class="coef" value="2" min="0"></td>
-            </tr>
-            <tr>
-                <td>Organic Chemistry</td>
-                <td><input type="number" class="td" value="0" min="0" max="20"></td>
-                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
-                <td><input type="number" class="coef" value="2" min="0"></td>
-            </tr>
-            <tr>
-                <td>General Chemistry</td>
-                <td><input type="number" class="td" value="0" min="0" max="20"></td>
-                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
-                <td><input type="number" class="coef" value="2" min="0"></td>
-            </tr>
-            <tr>
-                <td>Physics</td>
-                <td><input type="number" class="td" value="0" min="0" max="20"></td>
-                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
-                <td><input type="number" class="coef" value="2" min="0"></td>
-            </tr>
-            <tr>
-                <td>Biostatistics</td>
-                <td><input type="number" class="td" value="0" min="0" max="20"></td>
-                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
-                <td><input type="number" class="coef" value="2" min="0"></td>
-            </tr>
-            <tr>
-                <td>Computer Science</td>
-                <td><input type="number" class="td" value="0" min="0" max="20"></td>
-                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
-                <td><input type="number" class="coef" value="2" min="0"></td>
-            </tr>
-            <tr>
-                <td>Terminology</td>
-                <td><input type="number" class="td" value="0" min="0" max="20"></td>
-                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
-                <td><input type="number" class="coef" value="1" min="0"></td>
-            </tr>
-            <tr>
-                <td>English</td>
-                <td><input type="number" class="td" value="0" min="0" max="20"></td>
-                <td><input type="number" class="exam" value="0" min="0" max="20"></td>
-                <td><input type="number" class="coef" value="1" min="0"></td>
-            </tr>
+            <tr><td>Plant Biology</td><td><input type="number" class="td" value="0" min="0" max="20"></td><td><input type="number" class="exam" value="0" min="0" max="20"></td><td><input type="number" class="coef" value="2"></td></tr>
+            <tr><td>Animal Biology</td><td><input type="number" class="td" value="0"></td><td><input type="number" class="exam" value="0"></td><td><input type="number" class="coef" value="2"></td></tr>
+            <tr><td>Organic Chemistry</td><td><input type="number" class="td" value="0"></td><td><input type="number" class="exam" value="0"></td><td><input type="number" class="coef" value="2"></td></tr>
+            <tr><td>General Chemistry</td><td><input type="number" class="td" value="0"></td><td><input type="number" class="exam" value="0"></td><td><input type="number" class="coef" value="2"></td></tr>
+            <tr><td>Physics</td><td><input type="number" class="td" value="0"></td><td><input type="number" class="exam" value="0"></td><td><input type="number" class="coef" value="2"></td></tr>
+            <tr><td>Biostatistics</td><td><input type="number" class="td" value="0"></td><td><input type="number" class="exam" value="0"></td><td><input type="number" class="coef" value="2"></td></tr>
+            <tr><td>Computer Science</td><td><input type="number" class="td" value="0"></td><td><input type="number" class="exam" value="0"></td><td><input type="number" class="coef" value="2"></td></tr>
+            <tr><td>Terminology</td><td><input type="number" class="td" value="0"></td><td><input type="number" class="exam" value="0"></td><td><input type="number" class="coef" value="1"></td></tr>
+            <tr><td>English</td><td><input type="number" class="td" value="0"></td><td><input type="number" class="exam" value="0"></td><td><input type="number" class="coef" value="1"></td></tr>
         </tbody>
     </table>
-    <button class="calculate" onclick="calculateFinalNote()">Calculate Final Note</button>
-    <h3>Final Note: <span id="finalNote">0.00</span></h3>
+
+    <h3>Semester 2</h3>
+    <table class="S1Grade">
+        <thead>
+            <tr>
+                <th>Module</th>
+                <th>TD/TP (40%)</th>
+                <th>Exam (60%)</th>
+                <th>Coefficient</th>
+            </tr>
+        </thead>
+        <tbody id="modulesS2">
+            <tr><td>Chemical Methods</td><td><input type="number" class="td" value="0"></td><td><input type="number" class="exam" value="0"></td><td><input type="number" class="coef" value="3"></td></tr>
+            <tr><td>Physical Methods</td><td><input type="number" class="td" value="0"></td><td><input type="number" class="exam" value="0"></td><td><input type="number" class="coef" value="2"></td></tr>
+            <tr><td>General Chemistry 2</td><td><input type="number" class="td" value="0"></td><td><input type="number" class="exam" value="0"></td><td><input type="number" class="coef" value="2"></td></tr>
+            <tr><td>Inorganic Chemistry</td><td><input type="number" class="td" value="0"></td><td><input type="number" class="exam" value="0"></td><td><input type="number" class="coef" value="2"></td></tr>
+            <tr><td>Taxonomy and Plant systems</td><td><input type="number" class="td" value="0"></td><td><input type="number" class="exam" value="0"></td><td><input type="number" class="coef" value="2"></td></tr>
+            <tr><td>Anatomy Physiopathology</td><td><input type="number" class="td" value="0"></td><td><input type="number" class="exam" value="0"></td><td><input type="number" class="coef" value="2"></td></tr>
+            <tr><td>History of Pharmacy</td><td><input type="number" class="td" value="0"></td><td><input type="number" class="exam" value="0"></td><td><input type="number" class="coef" value="1"></td></tr>
+        </tbody>
+    </table>
+
+    <button class="calculate" onclick="calculateFinalNote()">Calculate Final Notes</button>
+
+    <h3>Semester 1 Average: <span id="s1Note">0.00</span></h3>
+    <h3>Semester 2 Average: <span id="s2Note">0.00</span></h3>
+    <h3>General Average: <span id="finalNote">0.00</span></h3>
 </div>
-    <script>
-        function calculateFinalNote() {
-            let modules = document.querySelectorAll("#modules tr");
-            let totalWeightedSum = 0;
-            let totalCoef = 0;
-            
-            modules.forEach(row => {
+
+<script>
+    function calculateFinalNote() {
+        function getSemesterAverage(rows) {
+            let sum = 0;
+            let coefTotal = 0;
+            rows.forEach(row => {
                 let td = parseFloat(row.querySelector(".td").value) || 0;
                 let exam = parseFloat(row.querySelector(".exam").value) || 0;
                 let coef = parseFloat(row.querySelector(".coef").value) || 0;
-                
-                if (coef > 0) {
-                    let moduleNote = (td * 0.4) + (exam * 0.6);
-                    totalWeightedSum += moduleNote * coef;
-                    totalCoef += coef;
-                }
-            });
-            
-            let finalNote = totalCoef > 0 ? totalWeightedSum / totalCoef : 0;
-            document.getElementById("finalNote").textContent = finalNote.toFixed(2);
-            let finalNoteElement = document.getElementById("finalNote");
-finalNoteElement.style.color = finalNote >= 10 ? "green" : "red";
 
+                let note = td * 0.4 + exam * 0.6;
+                sum += note * coef;
+                coefTotal += coef;
+            });
+            let avg = coefTotal > 0 ? sum / coefTotal : 0;
+            return { avg, sum, coefTotal };
         }
-    </script>
+
+        const s1 = getSemesterAverage(document.querySelectorAll("#modules tr"));
+        const s2 = getSemesterAverage(document.querySelectorAll("#modulesS2 tr"));
+
+        const generalAvg = (s1.sum + s2.sum) / (s1.coefTotal + s2.coefTotal);
+
+        document.getElementById("s1Note").textContent = s1.avg.toFixed(2);
+        document.getElementById("s2Note").textContent = s2.avg.toFixed(2);
+        document.getElementById("finalNote").textContent = generalAvg.toFixed(2);
+        document.getElementById("s1Note").style.color = s1.avg >= 10 ? "green" : "red";
+        document.getElementById("s2Note").style.color = s2.avg >= 10 ? "green" : "red";
+        document.getElementById("finalNote").style.color = generalAvg >= 10 ? "green" : "red";
+    }
+</script>
+
 </body>
 </html>
